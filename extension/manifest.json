@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PhishGuard Multi-Agent Security",
+  "version": "2.0",
+  "description": "Proactive site-wide threat detection and inline credential warning agent.",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+}

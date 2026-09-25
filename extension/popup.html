@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PhishGuard Report</title>
+    <style>
+        body {
+            width: 260px;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 14px;
+            background-color: #f8fafc;
+            color: #1e293b;
+        }
+        h3 {
+            margin-top: 0;
+            font-size: 15px;
+            color: #0f172a;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+        .stat-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            padding: 10px;
+            margin-bottom: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .stat-label { 
+            font-size: 13px; 
+            color: #64748b; 
+        }
+        .stat-value { 
+            font-size: 16px; 
+            font-weight: bold; 
+        }
+        .danger { 
+            color: #dc2626; 
+        }
+        .safe { 
+            color: #16a34a; 
+        }
+        .divider {
+            border-top: 1px solid #e2e8f0;
+            margin: 14px 0 10px;
+        }
+        .section-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #0f172a;
+            margin-bottom: 6px;
+        }
+        .section-sub {
+            font-size: 11.5px;
+            color: #64748b;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+        #openScanner {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 6px;
+            background: #2563eb;
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+        }
+        #openScanner:hover {
+            background: #1d4ed8;
+        }
+    </style>
+</head>
+<body>
+    <h3>🛡️ PhishGuard DOM Report</h3>
+    <div class="stat-box">
+        <span class="stat-label">Total Links Found:</span>
+        <span class="stat-value" id="total-links">-</span>
+    </div>
+    <div class="stat-box">
+        <span class="stat-label">Suspicious Links:</span>
+        <span class="stat-value danger" id="phish-links">-</span>
+    </div>
+
+    <div class="divider"></div>
+    <div class="section-label">💳 UPI QR Scanner</div>
+    <div class="section-sub">Scan a UPI QR before you pay — checks if it will send money or charge your account.</div>
+    <button id="openScanner">Scan Before You Pay</button>
+
+    <script src="popup.js"></script>
+</body>
+</html>
